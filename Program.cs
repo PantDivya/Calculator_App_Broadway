@@ -66,7 +66,5 @@ while (true)
     }
 }
 
-
-
 Console.ReadKey();
 
