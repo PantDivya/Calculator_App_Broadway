@@ -1,15 +1,18 @@
 ﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Welcome to Broadway Calculator");
+Console.WriteLine("Welcome to Broadways Dot NET course");
 
-Console.WriteLine("Please provide the first input");
-int firstInput=int.Parse(Console.ReadLine());
+Console.WriteLine("Provide first number");
+int a = int.Parse(Console.ReadLine());
 
-//statement
-Console.WriteLine("Please provide the second  input");
+Console.WriteLine("Provide second number");
+int b = int.Parse(Console.ReadLine());
 
-int secondInput=int.Parse(Console.ReadLine());
-
-int sum=firstInput+secondInput;
-//string Interpolation
-Console.WriteLine($"The result is : {sum}");
+int sum = a + b;
+int difference = a - b;
+int product = a * b;
+int division = a / b;
+Console.WriteLine("The Sum of two number is:" + sum);
+Console.WriteLine("The difference of two number is:" + difference);
+Console.WriteLine("The product of two number is:" + product);
+Console.WriteLine("The division of two number is:" + division);
 
