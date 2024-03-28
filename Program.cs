@@ -17,6 +17,24 @@
 double num1, num2, result;
 string operation;
 
+DateTime currentTime = DateTime.Now;
+
+int currentHour = currentTime.Hour;
+
+if (currentHour >= 0 && currentHour < 7)
+{
+    Console.WriteLine("Good morning");
+}
+
+else if (currentHour >= 7 && currentHour < 19)
+{
+    Console.WriteLine("Good afternoon");
+}
+
+else if (currentHour >= 19 && currentHour <= 23)
+{
+    Console.WriteLine("Good evening");
+}
 
 while (true)
 {
@@ -92,21 +110,3 @@ while (true)
     break;
 }
 
-DateTime currentTime = DateTime.Now;
-
-int currentHour = currentTime.Hour;
-
-if (currentHour >= 0 && currentHour < 7)
-{
-    Console.WriteLine("Good morning");
-}
-
-else if (currentHour >= 7 && currentHour < 19)
-{
-    Console.WriteLine("Good afternoon");
-}
-
-else if (currentHour >= 19 && currentHour <= 23)
-{
-    Console.WriteLine("Good evening");
-}
