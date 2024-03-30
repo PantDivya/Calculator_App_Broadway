@@ -28,4 +28,5 @@ int divide = firstInput / secondInput;
 
 Console.WriteLine($"The result is : {sum}");
 Console.WriteLine($"The result is : {sub}");
-
+Console.WriteLine($"The result is : {multiply}");
+Console.WriteLine($"The result is : {divide}");
