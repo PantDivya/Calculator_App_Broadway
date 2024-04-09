@@ -2,60 +2,79 @@
 
 using System.ComponentModel;
 
-DisplayMessage();
-int userOption=ReadUserInput();
-
-
-Console.WriteLine("Please provide the first input");
-int firstInput = int.Parse(Console.ReadLine());
-Console.WriteLine("Provide second number");
-int b = int.Parse(Console.ReadLine());
-
-
-int secondInput = int.Parse(Console.ReadLine());
-
-if (userOption == 1)
+DateTime CurrentTime = DateTime.Now;
+if (CurrentTime.Hour > 5 && CurrentTime.Hour < 12)
 {
-    int sum = firstInput + secondInput;
-    //string Interpolation
-    Console.WriteLine($"The result is : {sum}");
+    Console.WriteLine("Good Morning");
 }
-else if (userOption == 2)
+else if (CurrentTime.Hour >= 12 && CurrentTime.Hour < 18)
 {
-    int difference = secondInput - firstInput;
-    //string Interpolation
-    Console.WriteLine($"The result is : {difference}");
+    Console.WriteLine("Good Afternoon");
+
 }
-else if (userOption == 3)
+else
 {
-    int product = firstInput * secondInput;
-    //string Interpolation
-    Console.WriteLine($"The result is : {product}");
+    Console.WriteLine("Good Evening");
 }
-else if (userOption == 4)
+void GameLoop()
 {
-    int division = firstInput / secondInput;
-    //string Interpolation
-    Console.WriteLine($"The result is : {division}");
-}
-else if (userOption == 5)
-{
-    
-    for(int i = firstInput; i < secondInput; i++)
+    while (true)
     {
-        Console.WriteLine($"{firstInput}*{i}={firstInput * i}");
+        DisplayMessage();
+        int userOption = ReadUserInput();
+        if (userOption == 0)
+        {
+            Console.WriteLine("Thankyou!!");
+            break;
+        }
+
+        Console.WriteLine("Please provide the first input");
+        int firstInput = int.Parse(Console.ReadLine());
+        Console.WriteLine("Provide second number");
+
+
+
+        int secondInput = int.Parse(Console.ReadLine());
+        
+        if (userOption == 1)
+        {
+            int sum = firstInput + secondInput;
+            //string Interpolation
+            Console.WriteLine($"The result is : {sum}");
+        }
+        else if (userOption == 2)
+        {
+            int difference = secondInput - firstInput;
+            //string Interpolation
+            Console.WriteLine($"The result is : {difference}");
+        }
+        else if (userOption == 3)
+        {
+            int product = firstInput * secondInput;
+            //string Interpolation
+            Console.WriteLine($"The result is : {product}");
+        }
+        else if (userOption == 4)
+        {
+            int division = firstInput / secondInput;
+            //string Interpolation
+            Console.WriteLine($"The result is : {division}");
+        }
+        else if (userOption == 5)
+        {
+
+            for (int i = firstInput; i < secondInput; i++)
+            {
+                Console.WriteLine($"{firstInput}*{i}={firstInput * i}");
+            }
+
+            //productTable
+        }
+
     }
-    
-    //productTable
 }
-DisplayMessage();
-ReadUserInput();
 
-
-
-
-
-
+GameLoop();
 
 int ReadUserInput()
 {
@@ -73,7 +92,8 @@ void DisplayMessage()
     Console.WriteLine("3.Division :");
     Console.WriteLine("4.Multiplication:");
     Console.WriteLine("5.Product table:");
-
+    Console.WriteLine("0.Exit:");
+ 
 }
 
 
