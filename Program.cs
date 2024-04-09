@@ -7,20 +7,20 @@ List<char> history_operator = new List<char>();
 
 void DisplayMessage()
 {
-    Console.WriteLine("\n\n\n\nWelcome to the Calculator \n ------------------ App V-0.1------------------\n\n\n");
+    Console.WriteLine("\n\n\n\nWelcome to the Calculator \n ------------------ App V-0.1------------------");
     DateTime CurrentTime = DateTime.Now;
     if (CurrentTime.Hour > 1 && CurrentTime.Hour < 12)
     {
-        Console.WriteLine("Good Morning");
+        Console.WriteLine("Good Morning\n\n\n");
     }
     else if (CurrentTime.Hour >= 12 && CurrentTime.Hour < 18)
     {
-        Console.WriteLine("Good Afternoon");
+        Console.WriteLine("Good Afternoon\n\n\n");
 
     }
     else
     {
-        Console.WriteLine("Good Evening");
+        Console.WriteLine("Good Evening\n\n\n");
     }
     Console.WriteLine("Select the Appropriate Option ");
     Console.WriteLine("Enter 1 for Addition ");
