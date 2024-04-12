@@ -1,113 +1,175 @@
-﻿// See https://aka.ms/new-console-template for more information
-//Console.WriteLine("Welcome to Broadway Calculator");
+﻿userGreeting();
+bool userConsent = true;
+double result;
 
-//Console.WriteLine("Please provide the first input");
-//int firstInput=int.Parse(Console.ReadLine());
-
-
-//Console.WriteLine("Please provide the second  input");
-
-//int secondInput=int.Parse(Console.ReadLine());
-
-//int sum=firstInput+secondInput;
-//string Interpolation
-//Console.WriteLine($"The result is : {sum}");
-
-
-double num1, num2, result;
-string operation;
-
-DateTime currentTime = DateTime.Now;
-
-int currentHour = currentTime.Hour;
-
-if (currentHour >= 0 && currentHour < 7)
+while (userConsent)
 {
-    Console.WriteLine("Good morning");
+    double firstInput = userFirstInput();
+    double secondInput = userSecondInput();
+    operationCalculation(firstInput, secondInput);
+    userConsent = IsUserConsent();
 }
 
-else if (currentHour >= 7 && currentHour < 19)
+void userGreeting()
 {
-    Console.WriteLine("Good afternoon");
-}
+    DateTime currentTime = DateTime.Now;
 
-else if (currentHour >= 19 && currentHour <= 23)
-{
-    Console.WriteLine("Good evening");
-}
+    int currentHour = currentTime.Hour;
 
-while (true)
-{
-    Console.WriteLine("Enter the first number:");
-    if (!double.TryParse(Console.ReadLine(), out num1))
+    if (currentHour >= 0 && currentHour < 7)
     {
-        Console.WriteLine("Invalid first number. Please enter a valid number.");
+        Console.WriteLine("Good morning");
     }
-    else
+
+    else if (currentHour >= 7 && currentHour < 19)
     {
-        break;
+        Console.WriteLine("Good afternoon");
+    }
+
+    else if (currentHour >= 19 && currentHour <= 23)
+    {
+        Console.WriteLine("Good evening");
     }
 }
 
-while (true)
+double userFirstInput()
 {
-    Console.WriteLine("Enter the second number:");
-    if (!double.TryParse(Console.ReadLine(), out num2))
+    double num1;
+    while (true)
     {
-        Console.WriteLine("Invalid second number. Please enter a valid number.");
-    }
-    else
-    {
-        break;
-    }
-}
-
-while (true)
-{
-    Console.WriteLine("Enter the operation to be performed (+, -, *, /): ");
-    operation = Console.ReadLine();
-
-    switch (operation)
-    {
-        case "+":
-            result = num1 + num2;
-            Console.WriteLine("The addition is: " + result);
+        Console.WriteLine("Enter the first number:");
+        if (!double.TryParse(Console.ReadLine(), out num1))
+        {
+            Console.WriteLine("Invalid first number. Please enter a valid number.");
+        }
+        else
+        {
             break;
+        }
+    }
 
-        case "-":
-            result = num1 - num2;
-            Console.WriteLine("The subtraction is: " + result);
+    return (double)num1;
+}
+
+double userSecondInput()
+{
+    double num2;
+    while (true)
+    {
+        Console.WriteLine("Enter the second number:");
+        if (!double.TryParse(Console.ReadLine(), out num2))
+        {
+            Console.WriteLine("Invalid second number. Please enter a valid number.");
+        }
+        else
+        {
             break;
+        }
+    }
 
-        case "*":
-            result = num1 * num2;
-            Console.WriteLine("The multiplication is: " + result);
-            break;
+    return (double)num2;
+}
 
-        case "/":
-            while (true)
-            {
-                if (num2 == 0)
-                {
-                    Console.WriteLine("Cannot divide by zero. Please enter a non-zero second number:");
-                    if (!double.TryParse(Console.ReadLine(), out num2) || num2 == 0)
-                    {
-                        Console.WriteLine("Invalid second number. Please enter a valid non-zero number.");
-                        continue;
-                    }
-                }
-                result = num1 / num2;
-                Console.WriteLine("The division is: " + result);
+void operationCalculation(double firstInput, double secondInput)
+{
+
+    string operation;
+    while (true)
+    {
+        Console.WriteLine("Enter the operation to be performed (+, -, *, /): ");
+        operation = Console.ReadLine();
+
+        switch (operation)
+        {
+            case "+":
+                Addition(firstInput, secondInput);
                 break;
-            }
-            break;
 
-        default:
-            Console.WriteLine("Invalid operation. Please enter a valid operation.");
-            continue;
+            case "-":
+                Subtraction(firstInput, secondInput);
+                break;
+
+            case "*":
+                Multiplication(firstInput, secondInput);
+                break;
+
+            case "/":
+                Division(firstInput, secondInput);
+                break;
+
+            default:
+                Console.WriteLine("Invalid operation. Please enter a valid operation.");
+                continue;
+        }
+        break;
+    }
+}
+
+bool IsUserConsent()
+{
+    char option;
+    while (true)
+    {
+        Console.WriteLine("Do you want to continue. Press y to continue");
+        if (!char.TryParse(Console.ReadLine(), out option))
+        {
+            Console.WriteLine("Invalid character. Please enter a valid character.");
+        }
+        else
+        {
+            break;
+        }
     }
 
-    break;
+    if (option == 'y' || option == 'Y')
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+
 }
+
+void Addition(double firstInput, double secondInput)
+{
+    result = firstInput + secondInput;
+    Console.WriteLine("The addition is: " + result);
+}
+
+void Subtraction(double firstInput, double secondInput)
+{
+    result = firstInput - secondInput;
+    Console.WriteLine("The subtraction is: " + result);
+}
+
+void Multiplication(double firstInput, double secondInput)
+{
+    result = firstInput * secondInput;
+    Console.WriteLine("The multiplication is: " + result);
+}
+
+void Division(double firstInput, double secondInput)
+{
+    while (true)
+    {
+        if (secondInput == 0)
+        {
+            Console.WriteLine("Cannot divide by zero. Please enter a non-zero second number:");
+            if (!double.TryParse(Console.ReadLine(), out secondInput) || secondInput == 0)
+            {
+                Console.WriteLine("Invalid second number. Please enter a valid non-zero number.");
+                continue;
+            }
+        }
+        result = firstInput / secondInput;
+        Console.WriteLine("The division is: " + result);
+        break;
+    }
+}
+
+
+
 
 
