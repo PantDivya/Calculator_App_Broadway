@@ -104,6 +104,19 @@ void operationCalculation(double firstInput, double secondInput)
         break;
     }
 }
+void addOne(out int test)
+{
+    int i = 1 + test;
+    test = 1 + test;
+    Console.WriteLine(i);
+}
+int test = 15;
+addOne(test);
+Console.WriteLine(test);
+
+Addition addition = new Addition();
+addition.Add();
+
 
 bool IsUserConsent()
 {
