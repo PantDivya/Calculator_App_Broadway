@@ -20,7 +20,7 @@ namespace Calculator_App_Broadway
             {
                 Console.WriteLine("Enter the valid number:");
             }
-            Console.WriteLine("Enter the uptp which multiplication:");
+            Console.WriteLine("Enter the last limit of the multiplication table:");
             while (!double.TryParse(Console.ReadLine(), out limit))
             {
                 Console.WriteLine("Enter the valid number:");
@@ -31,7 +31,7 @@ namespace Calculator_App_Broadway
             {
                 result = firstInput * count;
                 Console.WriteLine(firstInput + " * " + count + " = " + result);
-                count++;
+                count++;   
             }
         }
     }
