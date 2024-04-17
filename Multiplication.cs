@@ -8,10 +8,13 @@ namespace Calculator_App_Broadway
 {
     internal class Multiplication
     {
-        double result;
-        public void Multiply(double firstInput, double secondInput)
+        public void Multiply(int[] multiplyInputs)
         {
-            result = firstInput * secondInput;
+            int result = 1;
+            foreach (int num in multiplyInputs)
+            {
+                result *= num;
+            }
             Console.WriteLine("The multiplication is: " + result);
         }
     }

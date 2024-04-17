@@ -8,11 +8,14 @@ namespace Calculator_App_Broadway
 {
     internal class Subtraction
     {
-        double result;
-        public void Subtract(double firstInput,double secondInput)
+        public void Subtract(int[] subtractInputs)
         {
-            result = firstInput - secondInput;
-            Console.WriteLine("The subtraction is: " + result);
+            int result = subtractInputs[0];
+            for (int i = 1; i < subtractInputs.Length; i++)
+            {
+                result -= subtractInputs[i];
+            }
+            Console.WriteLine("The result of the subtraction is: " + result);
         }
     }
 }

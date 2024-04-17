@@ -1,10 +1,8 @@
 ﻿using Calculator_App_Broadway;
+using System;
 
 userGreeting();
 bool userConsent = true;
-double firstInput;
-double secondInput;
-
 
 
 Addition addition = new Addition();
@@ -13,10 +11,11 @@ Multiplication multiplication = new Multiplication();
 Division division = new Division();
 MultiplicationTable table = new MultiplicationTable();
 Factorial fact = new Factorial();
+Mean mean = new Mean();
 
 
 while (userConsent)
-{   
+{
     operationCalculation();
     userConsent = IsUserConsent();
 }
@@ -43,28 +42,31 @@ void userGreeting()
     }
 }
 
-
-double userFirstInput()
+int[] GetUserInput()
 {
-    double num1;
-    Console.WriteLine("Enter the first number:");
-    while (!double.TryParse(Console.ReadLine(), out num1))
-    {
-        Console.WriteLine("Invalid first number. Please enter a valid number.");
-    }
-    return (double)num1;
+    double num;
+    Console.WriteLine("Enter the number of inputs:");
 
-}
-
-double userSecondInput()
-{
-    double num2;
-    Console.WriteLine("Enter the second number:");
-    while (!double.TryParse(Console.ReadLine(), out num2))
+    while (!double.TryParse(Console.ReadLine(), out num))
     {
-        Console.WriteLine("Invalid second number. Please enter a valid number.");
+        Console.WriteLine("Invalid input. Please enter a valid number.");
     }
-    return (double)num2;
+
+    int[] userInput = new int[(int)num]; 
+    for (int i = 0; i < num; i++) 
+    {
+        Console.WriteLine("Enter the " + (i + 1) + " element:");
+        int input;
+
+        while (!int.TryParse(Console.ReadLine(), out input)) 
+        {
+            Console.WriteLine("Invalid input. Please enter a valid integer.");
+        }
+
+        userInput[i] = input;
+    }
+
+    return userInput;
 }
 
 void operationCalculation()
@@ -73,41 +75,49 @@ void operationCalculation()
     string operation;
     while (true)
     {
-        Console.WriteLine("Enter the operation to be performed (+, -, *, /, %,!): ");
+        Console.WriteLine("Enter the operation to be performed 1. Addition: ");
+        Console.WriteLine("Enter the operation to be performed 2. Subtraction: ");
+        Console.WriteLine("Enter the operation to be performed 3. Multiplication: ");
+        Console.WriteLine("Enter the operation to be performed 4. Division: ");
+        Console.WriteLine("Enter the operation to be performed 5. MultiplicationTable: ");
+        Console.WriteLine("Enter the operation to be performed 6. Factorial: ");
+        Console.WriteLine("Enter the operation to be performed 7. ArithmeticMean: ");
+
         operation = Console.ReadLine();
 
         switch (operation)
         {
-            case "+":
-                firstInput = userFirstInput();
-                secondInput = userSecondInput();
-                addition.Add(firstInput, secondInput);
+            case "1":
+                int[] addInputs = GetUserInput();
+                addition.Add(addInputs);
                 break;
 
-            case "-":
-                firstInput = userFirstInput();
-                secondInput = userSecondInput();
-                subtract.Subtract(firstInput, secondInput);
+            case "2":
+                int[] subtractInputs = GetUserInput();
+                subtract.Subtract(subtractInputs);
                 break;
 
-            case "*":
-                firstInput = userFirstInput();
-                secondInput = userSecondInput();
-                multiplication.Multiply(firstInput, secondInput);
+            case "3":
+                int[] multiplyInputs = GetUserInput();
+                multiplication.Multiply(multiplyInputs);
                 break;
 
-            case "/":
-                firstInput = userFirstInput();
-                secondInput = userSecondInput();
-                division.Divide(firstInput, secondInput);
+            case "4":
+                int[] divideInputs = GetUserInput();
+                division.Divide(divideInputs);
                 break;
 
-            case "%":
+            case "5":
                 table.multiplicationTable();
                 break;
 
-            case "!":
+            case "6":
                 fact.factorial();
+                break;
+
+            case "7":
+                int[] meanInputs = GetUserInput();
+                mean.arithmeticMean(meanInputs);
                 break;
 
             default:
@@ -135,7 +145,11 @@ bool IsUserConsent()
     else
     {
         return false;
+
     }
 
 }
+
+
+
 
