@@ -10,6 +10,7 @@ Addition addition = new Addition();
 Subtraction subtraction = new Subtraction();
 Multiplication multiplication = new Multiplication();
 Division divide = new Division();
+ReadWrite readWrite = new ReadWrite();
 
 #endregion
 
@@ -19,10 +20,9 @@ string operationType = "";
 int userOption;
 string inputLevel;
 int[] userInput;
-
-
-
+int Ans;
 bool userOperation = true;
+
 while (userOperation)
 {
     try
@@ -43,7 +43,10 @@ while (userOperation)
         userInput = UserInputForOperation(inputLevel);
 
         //method call for calculation 
-        CalculateOperation(inputLevel, userInput);
+        Ans = CalculateOperation(inputLevel, userInput);
+
+        readWrite.WriteFile(userOption, operationType, inputLevel, userInput, Ans);
+        readWrite.ReadFile();
 
     }
     catch (Exception ex)
@@ -57,7 +60,7 @@ while (userOperation)
 
 
 #region Methods
-void CalculateOperation(string inputLevel, int[] userInput)
+int CalculateOperation(string inputLevel, int[] userInput)
 {
     try
     {
@@ -65,57 +68,57 @@ void CalculateOperation(string inputLevel, int[] userInput)
         {
             if (userOption == 1)
             {
-                addition.OperationForTwoLevelInput(userInput, result);
+                result = addition.OperationForTwoLevelInput(userInput, result);
             }
             else if (userOption == 2)
             {
-                subtraction.OperationForTwoLevelInput(userInput, result);
+                result = subtraction.OperationForTwoLevelInput(userInput, result);
             }
             else if (userOption == 3)
             {
-                multiplication.OperationForTwoLevelInput(userInput, result);
+                result = multiplication.OperationForTwoLevelInput(userInput, result);
             }
             else if (userOption == 4)
             {
-                divide.OperationForTwoLevelInput(userInput, result);
+                result = divide.OperationForTwoLevelInput(userInput, result);
             }
         }
         else if (inputLevel == "1.2")
         {
             if (userOption == 1)
             {
-                addition.OperationForThreeLevelInput(userInput, result);
+                result = addition.OperationForThreeLevelInput(userInput, result);
             }
             else if (userOption == 2)
             {
-                subtraction.OperationForThreeLevelInput(userInput, result);
+                result = subtraction.OperationForThreeLevelInput(userInput, result);
             }
             else if (userOption == 3)
             {
-                multiplication.OperationForThreeLevelInput(userInput, result);
+                result = multiplication.OperationForThreeLevelInput(userInput, result);
             }
             else if (userOption == 4)
             {
-                divide.OperationForThreeLevelInput(userInput, result);
+                result = divide.OperationForThreeLevelInput(userInput, result);
             }
         }
         else if (inputLevel == "1.3")
         {
             if (userOption == 1)
             {
-                addition.OperationForNLevelInput(userInput, result);
+                result = addition.OperationForNLevelInput(userInput, result);
             }
             else if (userOption == 2)
             {
-                subtraction.OperationForNLevelInput(userInput, result);
+                result = subtraction.OperationForNLevelInput(userInput, result);
             }
             else if (userOption == 3)
             {
-                multiplication.OperationForNLevelInput(userInput, result);
+                result = multiplication.OperationForNLevelInput(userInput, result);
             }
             else if (userOption == 4)
             {
-                divide.OperationForNLevelInput(userInput, result);
+                result = divide.OperationForNLevelInput(userInput, result);
             }
         }
         else
@@ -127,6 +130,7 @@ void CalculateOperation(string inputLevel, int[] userInput)
     {
         Console.WriteLine(e);
     }
+    return result;
 }
 
 int ReadUserInputOperation()

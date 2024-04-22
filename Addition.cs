@@ -10,7 +10,7 @@ internal class Addition
             {
                 result += userInput[i];
             }
-            Console.WriteLine($"The sum of given two number of inputs: {result}");
+            Console.WriteLine($"The calculation for given two number of inputs: {result}");
         }
         catch (Exception e)
         {
@@ -26,7 +26,7 @@ internal class Addition
             {
                 result += userInput[i];
             }
-            Console.WriteLine($"The sum of given three number of inputs: {result}");
+            Console.WriteLine($"The calculation for given three number of inputs: {result}");
 
         }
         catch (Exception e)
@@ -43,7 +43,7 @@ internal class Addition
             {
                 result += userInput[i];
             }
-            Console.WriteLine($"The sum of given {userInput.Length} number of inputs: {result}");
+            Console.WriteLine($"The calculation for given {userInput.Length} number of inputs: {result}");
 
         }
         catch (Exception e)

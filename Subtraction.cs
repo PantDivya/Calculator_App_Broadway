@@ -11,7 +11,7 @@ internal class Subtraction
             {
                 result = userInput[0] - userInput[1];
             }
-            Console.WriteLine($"The difference of given two number of inputs: {result}");
+            Console.WriteLine($"The calculation for given two number of inputs: {result}");
         }
         catch (Exception e)
         {
@@ -27,7 +27,7 @@ internal class Subtraction
             {
                 result = userInput[0] - userInput[1] - userInput[2];
             }
-            Console.WriteLine($"The difference of given two number of inputs: {result}");
+            Console.WriteLine($"The calculation given two number of inputs: {result}");
 
         }
         catch (Exception e)
@@ -47,7 +47,7 @@ internal class Subtraction
                 result -= userInput[i];
             }
 
-            Console.WriteLine($"The difference of given {n} number of inputs: {result}");
+            Console.WriteLine($"The calculation for given {n} number of inputs: {result}");
 
         }
         catch (Exception e)

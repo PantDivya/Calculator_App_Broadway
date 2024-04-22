@@ -10,7 +10,7 @@ internal class Multiplication
             {
                 result = userInput[0] * userInput[1];
             }
-            Console.WriteLine($"The product of given two number of inputs: {result}");
+            Console.WriteLine($"The calculation for given two number of inputs: {result}");
 
         }
         catch (Exception e)
@@ -27,7 +27,7 @@ internal class Multiplication
             {
                 result = userInput[0] * userInput[1] * userInput[2];
             }
-            Console.WriteLine($"The product of given two number of inputs: {result}");
+            Console.WriteLine($"The calculation for given two number of inputs: {result}");
 
         }
         catch (Exception e)
@@ -46,7 +46,7 @@ internal class Multiplication
             {
                 result *= userInput[i];
             }
-            Console.WriteLine($"The product of given {n} number of inputs: {result}");
+            Console.WriteLine($"The calculation for given {n} number of inputs: {result}");
 
         }
         catch (Exception e)

@@ -1,0 +1,14 @@
+Please choose any below operation:
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+6. Exit
+1
+1.1 Addition with two level of input
+1.2 Addition with three level of input
+1.3 Addition with N level of input
+1.1
+Enter your inputs:
+223,456
+The calculation for given 2 number of inputs: 679
