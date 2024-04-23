@@ -10,5 +10,47 @@ Please choose any below operation:
 1.3 Addition with N level of input
 1.1
 Enter your inputs:
-223,456
-The calculation for given 2 number of inputs: 679
+12,34
+The calculation for given 2 number of inputs: 46
+Please choose any below operation:
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+6. Exit
+2
+1.1 Subtraction with two level of input
+1.2 Subtraction with three level of input
+1.3 Subtraction with N level of input
+1.2
+Enter your inputs:
+12,33,45
+The calculation for given 3 number of inputs: -66
+Please choose any below operation:
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+6. Exit
+3
+1.1 Multiplication with two level of input
+1.2 Multiplication with three level of input
+1.3 Multiplication with N level of input
+1,2
+Enter your inputs:
+
+The calculation for given 0 number of inputs: -66
+Please choose any below operation:
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+6. Exit
+1
+1.1 Addition with two level of input
+1.2 Addition with three level of input
+1.3 Addition with N level of input
+1.2
+Enter your inputs:
+12,44,55
+The calculation for given 3 number of inputs: 45

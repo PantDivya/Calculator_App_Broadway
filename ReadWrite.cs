@@ -6,8 +6,11 @@ internal class ReadWrite
 
     public void WriteFile(int userOption, string operationType, string inputLevel, int[] userInput, int Ans)
     {
-
-        using (StreamWriter sw = new StreamWriter(filepath))
+        if (string.IsNullOrEmpty(filepath))
+        {
+            using (StreamWriter sw = new StreamWriter(filepath)) ;
+        }
+        using (StreamWriter sw = File.AppendText(filepath))
         {
             sw.WriteLine("Please choose any below operation:");
             sw.WriteLine("1. Addition");
