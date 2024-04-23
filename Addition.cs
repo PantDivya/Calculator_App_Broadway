@@ -8,7 +8,7 @@ internal class Addition
         {
             for (int i = 0; i < 2; i++)
             {
-                result += userInput[i];
+                result = userInput[0] + userInput[1];
             }
             Console.WriteLine($"The calculation for given two number of inputs: {result}");
         }
@@ -24,7 +24,7 @@ internal class Addition
         {
             for (int i = 0; i < 3; i++)
             {
-                result += userInput[i];
+                result = userInput[0] + userInput[1] + userInput[2];
             }
             Console.WriteLine($"The calculation for given three number of inputs: {result}");
 
@@ -39,6 +39,7 @@ internal class Addition
     {
         try
         {
+            result = userInput[0];
             for (int i = 0; i < userInput.Length; i++)
             {
                 result += userInput[i];

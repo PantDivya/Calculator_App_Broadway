@@ -54,3 +54,199 @@ Please choose any below operation:
 Enter your inputs:
 12,44,55
 The calculation for given 3 number of inputs: 45
+Please choose any below operation:
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+6. Exit
+1
+1.1 Addition with two level of input
+1.2 Addition with three level of input
+1.3 Addition with N level of input
+12,12
+Enter your inputs:
+
+The calculation for given 0 number of inputs: 0
+Please choose any below operation:
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+6. Exit
+1
+1.1 Addition with two level of input
+1.2 Addition with three level of input
+1.3 Addition with N level of input
+1.1
+Enter your inputs:
+12,12
+The calculation for given 2 number of inputs: 24
+Please choose any below operation:
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+6. Exit
+1
+1.1 Addition with two level of input
+1.2 Addition with three level of input
+1.3 Addition with N level of input
+1.1
+Enter your inputs:
+24,12
+The calculation for given 2 number of inputs: 60
+Please choose any below operation:
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+6. Exit
+1
+1.1 Addition with two level of input
+1.2 Addition with three level of input
+1.3 Addition with N level of input
+1.1
+Enter your inputs:
+12,60
+The calculation for given 2 number of inputs: 132
+Please choose any below operation:
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+6. Exit
+1
+1.1 Addition with two level of input
+1.2 Addition with three level of input
+1.3 Addition with N level of input
+1.1
+Enter your inputs:
+12,12
+The calculation for given 2 number of inputs: 24
+Please choose any below operation:
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+6. Exit
+1
+1.1 Addition with two level of input
+1.2 Addition with three level of input
+1.3 Addition with N level of input
+1.3
+Enter your inputs:
+
+The calculation for given 0 number of inputs: 24
+Please choose any below operation:
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+6. Exit
+1
+1.1 Addition with two level of input
+1.2 Addition with three level of input
+1.3 Addition with N level of input
+1.1
+Enter your inputs:
+12,12
+The calculation for given 2 number of inputs: 24
+Please choose any below operation:
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+6. Exit
+1
+1.1 Addition with two level of input
+1.2 Addition with three level of input
+1.3 Addition with N level of input
+1.1
+Enter your inputs:
+24,12
+The calculation for given 2 number of inputs: 60
+Please choose any below operation:
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+6. Exit
+1
+1.1 Addition with two level of input
+1.2 Addition with three level of input
+1.3 Addition with N level of input
+1.1
+Enter your inputs:
+12,12
+The calculation for given 2 number of inputs: 24
+Please choose any below operation:
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+6. Exit
+1
+1.1 Addition with two level of input
+1.2 Addition with three level of input
+1.3 Addition with N level of input
+1.1
+Enter your inputs:
+12,24
+The calculation for given 2 number of inputs: 60
+Please choose any below operation:
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+6. Exit
+2
+1.1 Subtraction with two level of input
+1.2 Subtraction with three level of input
+1.3 Subtraction with N level of input
+1.1
+Enter your inputs:
+60,12
+The calculation for given 2 number of inputs: 48
+Please choose any below operation:
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+6. Exit
+2
+1.1 Subtraction with two level of input
+1.2 Subtraction with three level of input
+1.3 Subtraction with N level of input
+1.1
+Enter your inputs:
+48,12
+The calculation for given 2 number of inputs: 36
+Please choose any below operation:
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+6. Exit
+1
+1.1 Addition with two level of input
+1.2 Addition with three level of input
+1.3 Addition with N level of input
+1.1
+Enter your inputs:
+12,12
+The calculation for given 2 number of inputs: 24
+Please choose any below operation:
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+6. Exit
+1
+1.1 Addition with two level of input
+1.2 Addition with three level of input
+1.3 Addition with N level of input
+1.1
+Enter your inputs:
+24,12
+The calculation for given 2 number of inputs: 36

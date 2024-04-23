@@ -20,7 +20,6 @@ string operationType = "";
 int userOption;
 string inputLevel;
 int[] userInput;
-int Ans;
 bool userOperation = true;
 
 while (userOperation)
@@ -43,9 +42,9 @@ while (userOperation)
         userInput = UserInputForOperation(inputLevel);
 
         //method call for calculation 
-        Ans = CalculateOperation(inputLevel, userInput);
+        result = CalculateOperation(inputLevel, userInput);
 
-        readWrite.WriteFile(userOption, operationType, inputLevel, userInput, Ans);
+        readWrite.WriteFile(userOption, operationType, inputLevel, userInput, result);
         readWrite.ReadFile();
 
     }
@@ -181,10 +180,19 @@ int[] GetTwoLevelInput()
     string n = Console.ReadLine();
 
     string[] inputs = n.Split(",");
+
     int[] inputValue = new int[inputs.Length];
     for (int i = 0; i < 2; i++)
     {
-        inputValue[i] = int.Parse(inputs[i]);
+        if (inputs[i] == "Ans")
+        {
+            inputValue[i] = result;
+        }
+        else 
+        {
+            inputValue[i] = int.Parse(inputs[i]);
+        }
+        
 
     }
     return inputValue;
